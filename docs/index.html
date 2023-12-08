@@ -99,7 +99,7 @@
 
           <div class="container">
             <!-- Start Carousel -->
-            <div id="carousel-demo" class="carousel">
+            <div id="carousel-local" class="carousel">
               <div class="card">
                 <div class="l-article video">
                   <center>
@@ -135,7 +135,7 @@
 
               <div class="container">
                 <!-- Start Carousel -->
-                <div id="carousel-demo" class="carousel">
+                <div id="carousel-global" class="carousel">
                   <div class="card">
                     <div class="l-article video">
                       <center>
@@ -171,7 +171,7 @@
           
           <div class="container">
             <!-- Start Carousel -->
-            <div id="carousel-demo" class="carousel">
+            <div id="carousel-edit" class="carousel">
               <div class="card">
                 <div class="l-article video">
                   <center>
@@ -254,10 +254,28 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 		<script>
-		bulmaCarousel.attach('#carousel-demo', {
+      bulmaCarousel.attach('#carousel-local', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        // icons: { previous: "L", next: "<span style='color:green;font-weight:800'>R</span>"}
+      });
+		bulmaCarousel.attach('#carousel-global', {
 			slidesToScroll: 1,
 			slidesToShow: 1,
       infinite: true,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      // icons: { previous: "L", next: "<span style='color:green;font-weight:800'>R</span>"}
+		});
+		bulmaCarousel.attach('#carousel-edit', {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 8000,
       // icons: { previous: "L", next: "<span style='color:green;font-weight:800'>R</span>"}
 		});
 		</script>
