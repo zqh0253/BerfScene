@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title> BerfScene </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  </head>
+
+<body>
+    <!-- SECTION: HEADER -->
+    <div class="n-header">
+    </div>
+    <div class="n-title">
+        <h1> BerfScene: Bev-conditioned Equivariant Radiance Fields <br>for Infinite 3D Scene Generation</h1>
+    </div>
+    <div class="n-byline">
+      <div class="byline">
+          <ul class="authors">
+              <li> <a href="https://zqh0253.github.io" target="_blank">Qihang Zhang</a> <sup> 1 </sup></li>
+              <li> <a href="https://justimyhxu.github.io/" target="_blank">Yinghao Xu</a> <sup> 2 </sup></li>
+              <li> <a href="https://shenyujun.github.io/" target="_blank">Yujun Shen</a><sup> 3 </sup></li>
+              <li> <a href="https://daibo.info/" target="_blank">Bo Dai</a> <sup> 4 </sup></li>
+              <li> <a href="https://boleizhou.github.io/" target="_blank">Bolei Zhou</a> <sup> 5*</sup></li>
+              <li> <a href="https://ceyuan.me/" target="_blank">Ceyuan Yang</a><sup> 4* </sup></li>
+          </ul>
+          <div class="authors-affiliations-gap"></div>
+          <ul class="authors affiliations">
+            <li>
+                <sup> 1 </sup> The Chinese University of Hong Kong
+            </li>
+            <li>
+                <sup> 2 </sup> Stanford University
+            </li>
+            <li>
+                <sup> 3 </sup> Ant Group
+            </li>
+            <br>
+            <li>
+                <sup> 4 </sup> Shanghai AI Laboratory
+            </li>
+            <li>
+                <sup> 5 </sup> University of California, Los Angeles
+            </li>
+          </ul>
+          <ul class="authors affiliations">
+              <li>
+                  <sup> * </sup> Corresponding authors
+              </li>
+          </ul>
+      </div>
+  </div>
+    <!-- SECTION: MAIN BODY -->
+    <div class="n-article">
+        <!-- teaser -->
+        
+        <!-- paper links -->
+        
+        <h2 id="abstract"> Abstract </h2>
+      </p><img src="media/pipeline.jpg" width="100%" /></p>
+        <p>
+          Generating large-scale 3D scenes cannot simply apply existing 3D object synthesis technique since 3D scenes usually hold complex spatial configurations and consist of a number of objects at varying scales.
+          We thus propose a practical and efficient 3D representation that incorporates an equivariant radiance field with the guidance of a bird's-eye view (BEV) map.
+          Concretely, objects of synthesized 3D scenes could be easily manipulated through steering the corresponding BEV maps. 
+          Moreover, by adequately incorporating positional encoding and low-pass filters into the generator, the representation becomes equivariant to the given BEV map.
+          Such equivariance allows us to produce large-scale, even infinite-scale, 3D scenes via synthesizing local scenes and then stitching them with smooth consistency.
+      
+          <h2 id="links"> Links </h2>
+          <div class="grid download-section">
+              <div class="download-thumb">
+                  <a href="media/berf.pdf" target="_blank">
+                      <img class="dropshadow" src="media/berf_thumbnail.png" />
+                  </a>
+              </div>
+              <div class="download-links">
+                  <ul style="list-style-type: disc;">
+                      <li>
+                          <a href="media/berf.pdf" target="_blank"> Paper PDF </a>
+                      </li>
+                      <li>
+                          <a href="https://arxiv.org/abs/2312.02136" target="_blank"> arXiv </a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/zqh0253/BerfScene" target="_blank"> Code on GitHub (Coming Soon) </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+
+
+          <h2 id="results"> Local Scene Synthesis </h2>
+
+          <p>Our method can synthesize high-quality <b>local</b> 3D scenes:</p> <br><br>
+
+          <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-local" class="carousel">
+              <div class="card">
+                <div class="l-article video">
+                  <center>
+                    <video controls="" loop="" width="90%" autoplay muted>
+                        <source src="media/camera_clevr.mp4#t=1"
+                            type="video/mp4" />
+                    </video>
+                  </center>
+                </div>
+                <div class="video-caption">CLEVR</div>
+              </div>
+              
+              <div class="card">
+                <div class="l-article video">
+                  <center>
+                    <video controls="" loop="" width="90%" autoplay muted>
+                        <source src="media/camera_3dfront.mp4#t=1"
+                            type="video/mp4" />
+                    </video>
+                  </center>
+                </div>
+                <div class="video-caption">3D-Front</div>
+              </div>
+             
+             
+            </div>
+            <!-- End Carousel -->
+          </div>
+            
+            <h2 id="results"> Global Scene Synthesis </h2>
+            <p>Beyond <b>local</b> 3D scenes, our method can synthesize <b>large-scale global</b> 3D scenes:</p> <p>&nbsp;</p> 
+
+
+              <div class="container">
+                <!-- Start Carousel -->
+                <div id="carousel-global" class="carousel">
+                  <div class="card">
+                    <div class="l-article video">
+                      <center>
+                        <video controls="" loop="" width="90%" autoplay muted>
+                            <source src="media/global_clevr.mp4#t=1"
+                                type="video/mp4" />
+                        </video>
+                      </center>
+                    </div>
+                    <div class="video-caption">CLEVR</div>
+                  </div>
+                  
+                  <div class="card">
+                    <div class="l-article video">
+                      <center>
+                        <video controls="" loop="" width="90%" autoplay muted>
+                            <source src="media/global_carla.mp4#t=1"
+                                type="video/mp4" />
+                        </video>
+                     </center>
+                    </div>
+                    <div class="video-caption">Carla</div>
+                  </div>
+                
+                
+                </div>
+                <!-- End Carousel -->
+              </div>
+       
+          <h2 id="results"> Scene Editting </h2>
+          
+          <p>As our 3D representation is conditioned on Bird-Eye-View (BEV) map, we can edit the scene flexibiliy: </p> <p>&nbsp;</p> 
+          
+          <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-edit" class="carousel">
+              <div class="card">
+                <div class="l-article video">
+                  <center>
+                  <video controls="" loop="" width="90%" autoplay muted>
+                      <source src="media/edit_del.mp4#t=1"
+                          type="video/mp4" />
+                  </video></center>
+                </div>
+                <div class="video-caption">Delete</div>
+              </div>
+              
+              <div class="card">
+                <div class="l-article video">
+                  <center>
+                  <video controls="" loop="" width="90%" autoplay muted>
+                      <source src="media/edit_add.mp4#t=1"
+                          type="video/mp4" />
+                  </video></center>
+                </div>
+                <div class="video-caption">Add</div>
+              </div>
+
+              <div class="card">
+                <div class="l-article video">
+                  <center>
+                  <video controls="" loop="" width="90%" autoplay muted>
+                      <source src="media/edit_move.mp4#t=1"
+                          type="video/mp4" />
+                  </video></center>
+                </div>
+                <div class="video-caption">Move</div>
+              </div>
+
+              <div class="card">
+                <div class="l-article video">
+                  <center>
+                  <video controls="" loop="" width="90%" autoplay muted>
+                      <source src="media/edit_exhaustive.mp4#t=1"
+                          type="video/mp4" />
+                  </video></center>
+                </div>
+                <div class="video-caption">Exhaustive editting</div>
+              </div>
+            
+            
+            </div>
+            <!-- End Carousel -->
+          </div>
+          
+          <p>&nbsp;</p> 
+          <h4>As BEV can be easily modified, we can easily enable user participation in the generation process through a user-friendly UI: </h4> <p>&nbsp;</p> 
+          
+          <div class="card">
+            <div class="l-article video">
+              <video controls="" loop="" width="100%" autoplay muted>
+                  <source src="media/edit_clevr.mp4#t=1"
+                      type="video/mp4" />
+              </video>
+            </div>
+            <div class="video-caption">Real-time editting on CLEVR</div>
+          </div>
+
+
+
+          <h2 id="citation"> Citation </h2>
+          <pre><code>@inproceedings{zhang2023berfscene,
+              author = {Qihang Zhang and Yinghao Xu and Yujun Shen and Bo Dai and Bolei Zhou and Ceyuan Yang},
+              title = {{BerfScene}: Generative Novel View Synthesis with {3D}-Aware Diffusion Models},
+              booktitle = {arXiv},
+              year = {2023}
+            }</code></pre>
+
+          <h2 id="acknowledgments"> Acknowledgments</h2>
+          <p>We borrow the source code of this website from <a  style="color: blue;" href="https://nvlabs.github.io/genvs/">GeNVS</a>.</p> 
+
+
+
+    <div class="n-footer">
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+		<script>
+      bulmaCarousel.attach('#carousel-local', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        // icons: { previous: "L", next: "<span style='color:green;font-weight:800'>R</span>"}
+      });
+		bulmaCarousel.attach('#carousel-global', {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      // icons: { previous: "L", next: "<span style='color:green;font-weight:800'>R</span>"}
+		});
+		bulmaCarousel.attach('#carousel-edit', {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      // icons: { previous: "L", next: "<span style='color:green;font-weight:800'>R</span>"}
+		});
+		</script>
+
+</body>
+
+</html>
